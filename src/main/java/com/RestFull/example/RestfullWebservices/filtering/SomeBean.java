@@ -1,9 +1,10 @@
 package com.RestFull.example.RestfullWebservices.filtering;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonFilter;
 
-@JsonIgnoreProperties(value = {"field1","field2"})
+// @JsonIgnoreProperties(value = {"field1","field2"}) -> Static Filtering
+@JsonFilter("SomeBeanFilter")
 public class SomeBean {
     private String field1;
     private String field2;
